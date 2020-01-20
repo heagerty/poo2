@@ -80,7 +80,7 @@ class Truck extends Vehicle
   }
 
 
-public function isFull()
+public function isFull() : bool
 {
   return $this->load === $this->capacity; 
 }

@@ -19,3 +19,18 @@ $truck2 = new Truck('red', 18, 'gas', 200);
 
 print $truck1->getColor();
 print $truck2->forward();
+
+
+print $truck1->getLoad();
+$truck1->setLoad(99);
+print $truck1->getLoad();
+
+print $truck1->getLoad();
+$truck1->setLoad(100);
+print $truck1->getLoad();
+echo $truck1->isFull();
+
+
+print $truck1->start();
+print $truck1->brake();
+print $truck1->forward();
