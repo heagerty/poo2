@@ -1,6 +1,6 @@
 <?php
 
-class Bicycle
+class Bicycle  implements LightableInterface
 {
 
 
@@ -74,6 +74,16 @@ class Bicycle
   }
 
 
+    public function switchOn()
+    {
+        $islit = $this->getCurrentSpeed() > 10;
+        return $islit;
+    }
+
+    public function switchOff()
+    {
+        return false;
+    }
 
 
   

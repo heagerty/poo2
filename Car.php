@@ -1,6 +1,6 @@
 <?php
 
-class Car
+class Car  implements LightableInterface
 {
 
 
@@ -115,6 +115,15 @@ class Car
       return $this->energyLevel;
   }
 
+  public function switchOn()
+  {
+      return true;
+  }
 
-  
+    public function switchOff()
+    {
+        return false;
+    }
+
+
 }
