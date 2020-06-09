@@ -34,3 +34,18 @@ echo $truck1->isFull();
 print $truck1->start();
 print $truck1->brake();
 print $truck1->forward();
+
+
+// Exceptions
+
+$car->setHasParkBrake(true);
+try {
+    $car->start();
+} catch(Exception $e) {
+    // code to manage exceptions
+    echo "Exception received  : " . $e->getMessage() . "n";
+    $car->setHasParkBrake(false);
+    $car->start();
+} finally {
+    echo "Ma voiture roule comme un donut";
+}

@@ -28,6 +28,10 @@ class Car
       * @var string
       */
       private $energy;
+    /**
+     * @var boolean
+     */
+    private $hasParkBrake;
 
 
       public function __construct(string $color, int $nbseats, string $energy)
@@ -36,6 +40,18 @@ class Car
           $this->nbseats = $nbseats;
           $this->energy = $energy;
       }
+
+
+    /**
+     * @param bool $hasParkBrake
+     */
+    public function setHasParkBrake($hasParkBrake)
+    {
+        $this->hasParkBrake = $hasParkBrake;
+    }
+
+
+
 
       public function forward()
       {
@@ -59,6 +75,10 @@ class Car
 
   public function start()
   {
+      if ($this->hasParkBrake) {
+          throw new Exception("Release the handbrake!");
+      }
+
       $this->currentSpeed = 15;
 
       return "Go !";
